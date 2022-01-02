@@ -32,9 +32,25 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:id="@+id/btnOm"
+            android:src="@drawable/om"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="22dp"
+           />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
             android:id="@+id/btnBell"
             android:src="@drawable/bell"
-            android:layout_marginHorizontal="20dp"/>
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btnSankh"
+            android:src="@drawable/sankh"
+            android:layout_gravity="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
     </androidx.appcompat.widget.Toolbar>
 

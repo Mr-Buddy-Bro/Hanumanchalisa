@@ -41,6 +41,8 @@ class FragmentActivity : AppCompatActivity() {
         val btnNext = findViewById<ImageButton>(R.id.btnNext)
         val btnLoop = findViewById<ImageButton>(R.id.btnLoop)
         val btnBell = findViewById<ImageView>(R.id.btnBell)
+        val btnOm = findViewById<ImageView>(R.id.btnOm)
+        val btnSankh = findViewById<ImageView>(R.id.btnSankh)
         seekbar = findViewById<SeekBar>(R.id.sbPrgrs)
 
         val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle, code)
@@ -69,6 +71,21 @@ class FragmentActivity : AppCompatActivity() {
         btnBell.setOnClickListener {
             val playerTop = MediaPlayer.create(this,R.raw.bell)
             playerTop.start()
+        }
+        btnOm.setOnClickListener {
+            val playerTop = MediaPlayer.create(this,R.raw.omchant)
+            playerTop.start()
+        }
+        btnSankh.setOnClickListener {
+            val playerTop = MediaPlayer.create(this,R.raw.sankh)
+            playerTop.start()
+        }
+
+        btnNext.setOnClickListener {
+            player.seekTo(player.currentPosition+3000)
+        }
+        btnPrev.setOnClickListener {
+            player.seekTo(player.currentPosition-3000)
         }
 
         duration = getTotalDuration()
