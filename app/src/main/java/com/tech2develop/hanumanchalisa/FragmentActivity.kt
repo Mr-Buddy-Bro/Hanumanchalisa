@@ -1,16 +1,21 @@
 package com.tech2develop.hanumanchalisa
 
+import android.content.Context
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.SeekBar
-import android.widget.Toast
+import android.util.Log
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.gms.ads.*
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.rewarded.RewardItem
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.tech2develop.hanumanchalisa.AdControllers.LoadIntestitialAd
 import com.tech2develop.hanumanchalisa.Adapters.ViewPagerAdapter
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -26,6 +31,8 @@ class FragmentActivity : AppCompatActivity() {
     lateinit var runnable: Runnable
     var handler = Handler()
 
+    lateinit var loadInterstitialAd: LoadIntestitialAd
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment)
@@ -33,6 +40,9 @@ class FragmentActivity : AppCompatActivity() {
         code = intent.getIntExtra("itemCode",0)
         player = getMedia()
         player.isLooping = false
+
+        loadInterstitialAd = LoadIntestitialAd(this)
+        loadInterstitialAd.loadAd()
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager2 = findViewById<ViewPager2>(R.id.viewPager2)
@@ -43,6 +53,7 @@ class FragmentActivity : AppCompatActivity() {
         val btnBell = findViewById<ImageView>(R.id.btnBell)
         val btnOm = findViewById<ImageView>(R.id.btnOm)
         val btnSankh = findViewById<ImageView>(R.id.btnSankh)
+        val tvDuration = findViewById<TextView>(R.id.tvTotalTime)
         seekbar = findViewById<SeekBar>(R.id.sbPrgrs)
 
         val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle, code)
@@ -90,6 +101,10 @@ class FragmentActivity : AppCompatActivity() {
 
         duration = getTotalDuration()
         seekbar.max = duration
+
+        val min = duration/ 60
+        tvDuration.text = min.toString()+" min"
+
         seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 player.seekTo(p1*1000)
