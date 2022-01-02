@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">Hanuman chalisa</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Jai hanuman</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nav1">Sri hanuman chalisa</string>
+    <string name="nav2">Aarati</string>
+    <string name="nav3">Sri bajaranku baan</string>
+    <string name="nav4">Sankat mojan hanuman ashtak</string>
+    <string name="nav5">Sri raamchanthru krbal</string>
+    <string name="nav6">108 pavithru naam</string>
+
+    <string name="tab_text_1">BHAJAN</string>
+    <string name="tab_text_2">LYRICS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="pavNaam108">
+        line 1\n
+        line 2\n
+        line 3\n
+        line 4\n
+        line 5\n
+        line 6\n
+        line 7\n
+        line 8\n
+        line 9\n
+        line 10\n
+
+        line 11\n
+        line 12\n
+        line 13\n
+        line 14\n
+        line 15\n
+        line 16\n
+        line 17\n
+        line 18\n
+        line 19\n
+        line 20\n
+
+        line 21\n
+        line 22\n
+        line 23\n
+        line 24\n
+        line 25\n
+        line 26\n
+        line 27\n
+        line 28\n
+        line 29\n
+        line 30\n
+
+        line 31\n
+        line 32\n
+        line 33\n
+        line 34\n
+        line 35\n
+        line 36\n
+        line 37\n
+        line 38\n
+        line 39\n
+        line 40\n
+
+        line 41\n
+        line 42\n
+        line 43\n
+        line 44\n
+        line 45\n
+        line 46\n
+        line 47\n
+        line 48\n
+        line 49\n
+        line 50\n
+
+        line 51\n
+        line 52\n
+        line 53\n
+        line 54\n
+        line 55\n
+        line 56\n
+        line 57\n
+        line 58\n
+        line 59\n
+        line 60\n
+
+        line 61\n
+        line 62\n
+        line 63\n
+        line 64\n
+        line 65\n
+        line 66\n
+        line 67\n
+        line 68\n
+        line 69\n
+        line 70\n
+
+        line 71\n
+        line 72\n
+        line 73\n
+        line 74\n
+        line 75\n
+        line 76\n
+        line 77\n
+        line 78\n
+        line 79\n
+        line 80\n
+
+        line 81\n
+        line 82\n
+        line 83\n
+        line 84\n
+        line 85\n
+        line 86\n
+        line 87\n
+        line 88\n
+        line 89\n
+        line 90\n
+
+        line 91\n
+        line 92\n
+        line 93\n
+        line 94\n
+        line 95\n
+        line 96\n
+        line 97\n
+        line 98\n
+        line 99\n
+        line 100\n
+
+        line 101\n
+        line 102\n
+        line 103\n
+        line 104\n
+        line 105\n
+        line 106\n
+        line 107\n
+        line 108\n
+
+    </string>
+</resources>

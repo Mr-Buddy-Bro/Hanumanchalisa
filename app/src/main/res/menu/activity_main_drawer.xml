@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnChoose1"
+            android:iconTint="#A4000000"
+            android:onClick="btnnav1"
+            android:icon="@drawable/ic_baseline_brightness_high_24"
+            android:title="@string/nav1" />
+        <item
+            android:id="@+id/btnChoose2"
+            android:iconTint="#A4000000"
+            android:onClick="btnnav2"
+            android:icon="@drawable/ic_baseline_brightness_high_24"
+            android:title="@string/nav2" />
+        <item
+            android:id="@+id/btnChoose3"
+            android:iconTint="#A4000000"
+            android:onClick="btnnav3"
+            android:icon="@drawable/ic_baseline_brightness_high_24"
+            android:title="@string/nav3" />
+        <item
+            android:id="@+id/btnChoose4"
+            android:iconTint="#A4000000"
+            android:onClick="btnnav4"
+            android:icon="@drawable/ic_baseline_brightness_high_24"
+            android:title="@string/nav4" />
+        <item
+            android:id="@+id/btnChoose5"
+            android:iconTint="#A4000000"
+            android:onClick="btnnav5"
+
+            android:icon="@drawable/ic_baseline_brightness_high_24"
+            android:title="@string/nav5" />
+        <item
+            android:id="@+id/btnChoose6"
+            android:iconTint="#A4000000"
+            android:onClick="btnnav6"
+            android:icon="@drawable/ic_baseline_brightness_high_24"
+            android:title="@string/nav6" />
+
+    </group>
+</menu>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        android:background="#FF9800">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnBackPress"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sri hanuman chalisa"
+            android:layout_marginStart="40dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btnBell"
+            android:src="@drawable/bell"
+            android:layout_marginHorizontal="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:backgroundTint="#FF9800"
+        android:layout_width="match_parent"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="#A4FFFFFF"
+        app:tabSelectedTextColor="@color/white"
+        android:layout_height="50dp"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#FFF38E"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/tvcurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="0:00"
+            android:textColor="#FF5722" />
+
+        <TextView
+            android:id="@+id/tvTotalTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="0:00"
+            android:textColor="#FF5722" />
+
+
+        <SeekBar
+            android:id="@+id/sbPrgrs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnLay"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:progress="0"
+            android:progressTint="#FF5722"
+            android:thumbTint="#FF5722" />
+
+        <LinearLayout
+            android:id="@+id/btnLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FD6231"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_skip_previous_24"
+                android:backgroundTint="#ED9F19"
+                app:tint="@color/white" />
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_play_circle_outline_24"
+                android:backgroundTint="#ED9F19"
+                app:tint="@color/white" />
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_skip_next_24"
+                android:backgroundTint="#ED9F19"
+                app:tint="@color/white" />
+            <ImageButton
+                android:id="@+id/btnLoop"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_loop_24"
+                android:backgroundTint="#ED9F19"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
